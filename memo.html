@@ -74,7 +74,7 @@ function flip(card){
     card.classList.add('flipped'); card.style.background='#BC854D';
     card.innerHTML=card.dataset.t==='img'
         ? card.dataset.p
-        : `<img src="${card.dataset.p}" style="width:100%;height:100%;object-fit:cover">`;
+        : `<img src="${card.dataset.p}">`;
     selected.push(card); if(selected.length===2)check();
 }
 
