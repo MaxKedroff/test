@@ -62,7 +62,7 @@ function build(){
         const el=document.createElement('div');
         el.className='card'; el.dataset.c=c.c; el.dataset.p=c.p; el.dataset.t=c.t;
         el.innerHTML=c.t==='img'
-            ? `<img src="${c.c}" style="width:100%;height:100%;object-fit:cover">`
+            ? `<img src="${c.c}">`
             : c.c;
         el.onclick=()=>flip(el);
         grid.appendChild(el);
@@ -88,7 +88,7 @@ function check(){
             [a,b].forEach(c=>{
                 c.classList.remove('flipped'); c.style.background='#6B5F59';
                 c.innerHTML=c.dataset.t==='img'
-                    ? `<img src="${c.dataset.c}" style="width:100%;height:100%;object-fit:cover">`
+                    ? `<img src="${c.dataset.c}">`
                     : c.dataset.c;
             });
         }
