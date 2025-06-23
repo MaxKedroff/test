@@ -72,9 +72,7 @@ function build(){
 function flip(card){
     if(!canClick||card.classList.contains('matched')||card.classList.contains('flipped'))return;
     card.classList.add('flipped'); card.style.background='#BC854D';
-    card.innerHTML=card.dataset.t==='img'
-        ? card.dataset.p
-        : `<img src="${card.dataset.p}">`;
+    
     selected.push(card); if(selected.length===2)check();
 }
 
