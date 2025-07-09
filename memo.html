@@ -92,7 +92,7 @@ function check(){
         }
         selected=[]; canClick=true;
         if([...grid.children].every(c=>c.classList.contains('matched')))
-            alert('Молодцы! Всё найдено.');
+            window.parent.postMessage('gameCompleted', '*');
     },800);
 }
 
